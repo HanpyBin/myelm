@@ -1,0 +1,39 @@
+$blue: #3190e8;
+$bc: #e4e4e4;
+// 宽高
+@mixin wh($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+//size, color
+@mixin sc($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+//上下居中
+@mixin ct {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//flex布局和子元素对齐方式
+@mixin fj($type: space-between) {
+    display: flex;
+    justify-content: $type;
+}
+
+//font-size, line-height, font-family
+@mixin font($size, $height, $family: 'Microsoft YaHei') {
+    font: #{$size}/#{$height} $family;
+}
+
+// 上下左右居中
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
