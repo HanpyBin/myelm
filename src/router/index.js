@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Profile from '../views/Profile.vue'
 import Login from '../views/Login.vue'
 import City from '../views/City.vue'
+import Index from '../views/Index.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -26,6 +27,10 @@ const routes = [
   {
     path: '/city/:cityid',
     component: City
+  },
+  {
+    path: '/index',
+    component: Index
   }
 ]
 

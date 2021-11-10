@@ -21,6 +21,8 @@
         {{ headTitle }}
       </span>
     </section>
+    <slot name="search"></slot> 
+    <slot name="index"></slot>
   </header>
 </template>
 

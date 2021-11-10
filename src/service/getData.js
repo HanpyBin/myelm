@@ -55,3 +55,13 @@ export const searchLocation = (loc, name) => {
         url: `${BASE_URL}/v1/pois?city_id=${loc}&keyword=${name}`
     })
 }
+
+export const getLocationByGeohash = (geoHash)=>{
+    return axios(BASE_URL+"/v2/pois/"+geoHash)
+}
+
+export const getFoodTypes = (geoHash) => {
+    return axios({
+        url: `${BASE_URL}/v2/index_entry?geoHash=${geoHash}&group_type=1&flag[]=F`
+    })
+}

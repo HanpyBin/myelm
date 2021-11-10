@@ -87,7 +87,7 @@ export default {
                 this.searchHistory.push(locationChoosed);
             }
             setLocal('locationHistory', this.searchHistory);
-            this.$router.push({path: '/index'})
+            this.$router.push({path: '/index', query: {geohash}})
         },
         clearAll() {
             removeLocal('locationHistory');
