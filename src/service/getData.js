@@ -26,3 +26,32 @@ export const getSingleCity = (id) => {
         url: BASE_URL + '/v1/cities/' + id
     })
 }
+
+export const getLocal = (name)=>{
+    if (!name)
+        return;
+    return window.localStorage.getItem(name);
+}
+
+
+
+export const setLocal = (key, value) => {
+    if (!key)
+        return;
+    if (typeof value !== 'string') {
+        value = JSON.stringify(value);
+    }
+    window.localStorage.setItem(key, value);
+}
+
+export const removeLocal = (name) => {
+    if (!name)
+        return;
+    window.localStorage.removeItem(name);
+}
+
+export const searchLocation = (loc, name) => {
+    return axios({
+        url: `${BASE_URL}/v1/pois?city_id=${loc}&keyword=${name}`
+    })
+}
