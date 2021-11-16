@@ -26,28 +26,41 @@
                 <div class="swiper-pagination"></div>
             </div>
         </nav>
+        <div class="shop_list_container">
+            <header class="shop_header">
+                <svg class="shop_icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shop"></use>
+                </svg>
+                <span class="shop_header_title">附近商家</span>
+            </header>
+            <shop-list v-if="hasGetData" :geohash=geohash></shop-list>
+        </div>
+        <foot-guider></foot-guider>
     </div>
 </template>
 
 <script>
 import TopHeader from '@/components/TopHeader'
-import {getLocationByGeohash} from '@/service/getData'
-import { cityGuess, getFoodTypes } from '../service/getData'
+import FootGuider from '@/components/FootGuider'
+import ShopList from '@/components/common/ShopList'
+import { cityGuess, getFoodTypes, getLocationByGeohash} from '../service/getData'
 import { mapMutations } from 'vuex'
 import Swiper from 'swiper'
 import 'swiper/css/swiper.min.css'
-
 export default {
     data() {
         return {
             currentLocation: '',
             geohash: '',
             foodTypes: [],
-            imgBaseUrl: 'https://fuss10.elemecdn.com'
+            imgBaseUrl: 'https://fuss10.elemecdn.com',
+            hasGetData: false
         }
     },
     components: {
-        TopHeader
+        TopHeader,
+        ShopList,
+        FootGuider
     },
     async beforeMount() {
         if (!this.$route.query.geohash) {
@@ -57,14 +70,12 @@ export default {
         } else {
             this.geohash = this.$route.query.geohash;
         }
-        // console.log(this.geohash);
-        // this.SAVE_GEOHASH(this.geohash);
         // 获取当前位置信息
+        this.SAVE_GEOHASH(this.geohash);
         let res = await getLocationByGeohash(this.geohash);
         this.currentLocation = res.data.name;
-        this.SAVE_GEOHASH(res.data.latitude, res.data.longitude);
-        this.SAVE_LOCATION(res.data);
-        // console.log(this.currentLocation);
+        this.SAVE_ADDRESS(res.data);
+        this.hasGetData = true;
     },
     mounted() {
         getFoodTypes(this.geohash).then(res=>{
@@ -87,7 +98,7 @@ export default {
         })
     },
     methods: {
-        ...mapMutations(['SAVE_GEOHASH', 'SAVE_LOCATION']),
+        ...mapMutations(['SAVE_GEOHASH', 'SAVE_ADDRESS']),
         getCategoryId(url){
             let urlData = decodeURIComponent(url.split('=')[1].replace('&target_name',''));
             if (/restaurant_category_id/gi.test(urlData)) {
@@ -96,6 +107,9 @@ export default {
                 return ''
             }
         }
+    },
+    watch: {
+        
     }
 }
 </script>
@@ -152,6 +166,29 @@ export default {
             figcaption {
                 text-align: center;
                 @include sc(0.55rem, #666);
+            }
+        }
+    }
+
+    .shop_list_container{
+        margin-top: 0.4rem;
+        background-color: #fff;
+        border-top: 0.025rem solid $bc;
+        overflow: hidden;
+        .shop_header{
+            .shop_icon{
+                @include wh(0.6rem, 0.6rem); 
+                margin-left: 0.6rem;
+                vertical-align: middle;
+                fill: #999;
+    
+            }
+            .shop_header_title{
+                color: #999;
+                // font-weight: 200;
+                margin-left: 0.4rem;
+                @include font(0.55rem, 1.6rem);
+                // @include center;
             }
         }
     }

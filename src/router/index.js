@@ -1,10 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Profile from '../views/Profile.vue'
-import Login from '../views/Login.vue'
-import City from '../views/City.vue'
-import Index from '../views/Index.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -14,23 +9,37 @@ const routes = [
   },
   {
     path: '/home',
-    component: Home
+    component: ()=>import('@/views/Home')
   },
   {
     path: '/login',
-    component: Login
+    component: ()=>import('@/views/Login')
   },
   {
     path: '/profile',
-    component: Profile
+    component: ()=>import('@/views/Profile')
   },
   {
     path: '/city/:cityid',
-    component: City
+    component: ()=>import('@/views/City')
   },
   {
     path: '/index',
-    component: Index
+    component: ()=>import('@/views/Index'),
+    meta: {keepAlive: true}
+  },
+  {
+    path: '/search/:geohash',
+    component: ()=>import('@/views/Search')
+  },
+  //商店详情页
+  {
+    path: '/shop',
+    component: ()=>import('@/views/shop/Shop')
+  },
+  {
+    path: '/food',
+    component: ()=>import('@/views/Food')
   }
 ]
 

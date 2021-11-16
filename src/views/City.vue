@@ -25,7 +25,8 @@
 <script>
 import TopHeader from '../components/TopHeader.vue'
 import {getSingleCity, getLocal, setLocal, removeLocal} from '@/service/getData'
-import { searchLocation } from '../service/getData'
+import { searchLocation} from '../service/getData'
+import { mapMutations } from 'vuex'
 export default {
     data() {
         return {
@@ -51,6 +52,7 @@ export default {
         this.getSearchHistory();
     },
     methods: {
+        ...mapMutations(['SAVE_ADDRESS']),
         getSearchHistory() {
             var tempHistory = [];
             tempHistory = getLocal('locationHistory');
