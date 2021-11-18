@@ -367,7 +367,7 @@ export default {
             transition: all 0.3s;
             transform: translateY(0);
         }
-        .showlist-enter, .showlist-leave-active{
+        .showlist-enter, .showlist-leave-to{
             opacity: 0;
             transform: translateY(-100%);
         }

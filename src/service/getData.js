@@ -1,11 +1,12 @@
 import axios from 'axios';
-
-const BASE_URL = 'https://elm.cangdu.org';
+import { getLocal } from '../config/mUtils';
+// axios.defaults.withCredentials = true;
+const BASE_URL = '';
 
 
 export const cityGuess = () => {
     return axios({
-        url: BASE_URL + '/v1/cities',
+        url: 'https://elm.cangdu.org' + '/v1/cities',
         params:{
             type: 'guess'
         }
@@ -37,28 +38,7 @@ export const getSingleCity = (id) => {
     })
 }
 
-export const getLocal = (name)=>{
-    if (!name)
-        return;
-    return window.localStorage.getItem(name);
-}
 
-
-
-export const setLocal = (key, value) => {
-    if (!key)
-        return;
-    if (typeof value !== 'string') {
-        value = JSON.stringify(value);
-    }
-    window.localStorage.setItem(key, value);
-}
-
-export const removeLocal = (name) => {
-    if (!name)
-        return;
-    window.localStorage.removeItem(name);
-}
 
 export const searchLocation = (loc, name) => {
     return axios({
@@ -144,6 +124,40 @@ export const getFoodActivity = (latitude, longitude) => {
             latitude,
             longitude,
             kw: ''
+        }
+    })
+}
+
+export const getcaptchas = ()=>{
+    return axios({
+        url: BASE_URL + '/v1/captchas',
+        method: 'POST',
+        withCredentials: true
+    })
+}
+
+export const accountLogin = (username, password, captcha_code) => {
+    return axios({
+        url: BASE_URL + '/v2/login',
+        method: 'POST',
+        data:{
+            username,
+            password,
+            captcha_code
+        },
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json'
+		},
+    })
+}
+
+export const getUser = ()=>{
+    // getLocal('user_id');
+    return axios({
+        url: BASE_URL + '/v1/user',
+        params:{
+            user_id: getLocal('user_id')
         }
     })
 }

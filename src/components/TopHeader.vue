@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
   data() {
     return {};
@@ -35,10 +35,14 @@ export default {
   props: ["signin", "headTitle", "goBack"],
   mounted() {
     // console.log(this.userInfo);
+    this.getUserInfo();
   },
   computed: {
     ...mapState(["userInfo"]),
   },
+  methods:{
+    ...mapActions(['getUserInfo'])
+  }
 };
 </script>
 

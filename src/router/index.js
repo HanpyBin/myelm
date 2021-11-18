@@ -40,6 +40,10 @@ const routes = [
   {
     path: '/food',
     component: ()=>import('@/views/Food')
+  },
+  {
+    path: '/order',
+    component: ()=>import('@/views/Order')
   }
 ]
 

@@ -24,8 +24,8 @@
 
 <script>
 import TopHeader from '../components/TopHeader.vue'
-import {getSingleCity, getLocal, setLocal, removeLocal} from '@/service/getData'
-import { searchLocation} from '../service/getData'
+import {getSingleCity, searchLocation} from '@/service/getData'
+import {getLocal, setLocal, removeLocal} from '@/config/mUtils'
 import { mapMutations } from 'vuex'
 export default {
     data() {
