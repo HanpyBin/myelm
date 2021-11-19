@@ -17,7 +17,13 @@ const routes = [
   },
   {
     path: '/profile',
-    component: ()=>import('@/views/Profile')
+    component: ()=>import('@/views/profile/Profile'),
+    children:[
+      {
+        path:'/profile/info',
+        component: ()=>import('@/views/profile/children/Info')
+      }
+    ]
   },
   {
     path: '/city/:cityid',

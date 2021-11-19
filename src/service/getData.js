@@ -161,3 +161,10 @@ export const getUser = ()=>{
         }
     })
 }
+
+export const signout = () => {
+    // fetch('/v2/signout');
+    return axios({
+        url: BASE_URL + '/v2/signout'
+    })
+}

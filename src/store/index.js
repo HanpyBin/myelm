@@ -47,8 +47,11 @@ export default new Vuex.Store({
   },
   actions: {
     async getUserInfo(context) {
+      // console.log(5);
       let res = (await getUser()).data;
+      // console.log(6);
       context.commit("GET_USERINFO", res);
+      // console.log(7);
     }
   },
   modules: {

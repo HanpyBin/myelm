@@ -35,7 +35,9 @@ export default {
   props: ["signin", "headTitle", "goBack"],
   mounted() {
     // console.log(this.userInfo);
+    // console.log(1);
     this.getUserInfo();
+    // console.log(2);
   },
   computed: {
     ...mapState(["userInfo"]),
