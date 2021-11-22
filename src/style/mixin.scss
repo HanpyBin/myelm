@@ -59,3 +59,9 @@ $fc: #fff;
     -o-border-radius: $radius;
     border-radius: $radius;
 }
+
+@mixin bis($url) { 
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}

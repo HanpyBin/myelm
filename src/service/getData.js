@@ -50,8 +50,8 @@ export const searchLocation = (loc, name) => {
     })
 }
 
-export const getLocationByGeohash = async geoHash =>{
-    return await axios(BASE_URL+"/v2/pois/"+geoHash)
+export const getLocationByGeohash = geoHash =>{
+    return axios(BASE_URL+"/v2/pois/"+geoHash)
 }
 
 export const getFoodTypes = (geoHash) => {
@@ -166,5 +166,48 @@ export const signout = () => {
     // fetch('/v2/signout');
     return axios({
         url: BASE_URL + '/v2/signout'
+    })
+}
+
+export const shopDetails = (shopId, latitude, longitude) => {
+    return axios({
+        url: BASE_URL + '/shopping/restaurant/' + shopId,
+        params:{
+            latitude,
+            longitude: longitude + '&extras[]=activities&extras[]=album&extras[]=license&extras[]=identification&extras[]=statistics'
+        }
+    })
+}
+
+export const foodMenu = restaurant_id => {
+    return axios({
+        url: BASE_URL + '/shopping/v2/menu',
+        params:{
+            restaurant_id
+        }
+    })
+}
+
+export const getRatingList = (shopid, offset, tag_name='') => {
+    return axios({
+        url: BASE_URL + '/ugc/v2/restaurants/' + shopid + '/ratings',
+        params:{
+            has_content: true,
+            offset,
+            limit:10,
+            tag_name
+        }
+    })
+}
+
+export const ratingScores = shopid => {
+    return axios({
+        url: BASE_URL + '/ugc/v2/restaurants/' + shopid + '/ratings/scores'
+    })
+}
+
+export const ratingTags = shopid => {
+    return axios({
+        url: BASE_URL + '/ugc/v2/restaurants/' + shopid + '/ratings/tags'
     })
 }
