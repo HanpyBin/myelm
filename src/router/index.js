@@ -41,7 +41,25 @@ const routes = [
     //商店详情页
     {
         path: '/shop',
-        component: ()=>import('@/views/shop/Shop')
+        component: ()=>import('@/views/shop/Shop'),
+        children:
+        [
+            {
+                path: '/shop/shopDetail',
+                component: ()=>import('@/views/shop/children/ShopDetail'),
+                children:
+                [
+                    {
+                        path: '/shop/shopDetail/shopSafe',
+                        component: ()=>import('@/views/shop/children/children/ShopSafe')
+                    }
+                ]
+            },
+            {
+                path: '/shop/foodDetail',
+                component: ()=>import('@/views/shop/children/FoodDetail')
+            }
+        ]
     },
     {
         path: '/food',
