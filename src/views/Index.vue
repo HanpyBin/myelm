@@ -50,7 +50,7 @@ import 'swiper/css/swiper.min.css'
 export default {
     data() {
         return {
-            currentLocation: '',    //FIXME:再次选择地点时，headtop上的位置不发生变化
+            currentLocation: '', 
             geohash: '',
             foodTypes: [],
             imgBaseUrl: 'https://fuss10.elemecdn.com',
