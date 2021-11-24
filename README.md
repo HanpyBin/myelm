@@ -27,3 +27,63 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - 对于商店详情和商品详情而言，若使用多级路由直接进入会出现很多数据都是null的情况
 - 对于`Shop.vue`而言，将**商品**和**评价**两个模块写在一个组件里太**了，找时间重构一下
 - 登录模块总是失效，焯！
+
+## TODO LIST
+
+#### PAGES
+进度：11/43
+- [ ] Balance.vue
+    - [ ] Detail.vue
+- [ ] Benefit.vue
+    - [ ] Commend.vue
+    - [ ] Coupon.vue
+    - [ ] Exchange.vue
+    - [ ] HbDescription.vue
+    - [ ] HbHistory.vue
+- [x] City.vue
+- [ ] ConfirmOrder.vue
+    - [ ] ChooseAddress.vue
+    - [ ] Invoice.vue
+    - [ ] Payment.vue
+    - [ ] Remark.vue
+    - [ ] UserValidation.vue
+        - [ ] AddAddress.vue
+            - [ ] SearchAddress.vue
+- [ ] Download.vue
+- [ ] Find.vue
+- [x] Food.vue
+- [ ] Forget.vue
+- [x] Home.vue
+- [x] Login.vue
+- [x] Index.vue
+- [ ] Order.vue
+    - [ ] OrderDetail.vue
+- [ ] Points.vue
+    - [ ] Detail.vue
+- [x] Profile.vue
+    - [x] Info.vue
+        - [ ] Address.vue
+        - [ ] SetUsername.vue
+            - [ ] Add.vue
+                - [ ] AddDetai.vue
+- [ ] Search.vue
+- [x] Shop.vue
+    - [x] ShopDetail.vue
+        - [x] ShopSafe.vue
+    - [x] FoodDetai.vue
+- [ ] VipCard.vue
+    - [ ] InvoiceCard.vue
+    - [ ] UserCart.vue
+    - [ ] VipDescription.vue
+
+#### COMPONENTS
+进度：8/9
+- [x] FootGuider.vue
+- [x] TopHeader.vue
+- [x] AlertTip.vue
+- [x] BuyCart.vue
+- [ ] ComputeTime.vue
+- [x] Loading.vue
+- [x] RatingStar.vue
+- [x] ShopList.vue
+- [x] Svg.vue~~直接CV的，我确实不会~~
