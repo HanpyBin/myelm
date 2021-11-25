@@ -68,6 +68,40 @@ const routes = [
     {
         path: '/order',
         component: ()=>import('@/views/Order')
+    },
+    {
+        path: '/vipcard',
+        component: ()=>import('@/views/vipcard/VipCard'),
+        children:
+        [
+            {
+                path: '/vipcard/vipDescription',
+                component: ()=>import('@/views/vipcard/children/VipDescription')
+            },
+            {
+                path: '/vipcard/redeemvip',
+                component: ()=>import('@/views/vipcard/children/RedeemVip')
+            },
+            {
+                path: '/vipcard/invoiceRecord',
+                component: ()=>import('@/views/vipcard/children/InvoiceRecord')
+            }
+        ]
+    },
+    {
+        path: '/balance',
+        component: ()=>import('@/views/balance/Balance'),
+        children:
+        [
+            {
+                path: '/balance/detail',
+                component: ()=>import('@/views/balance/children/Detail')
+            }
+        ]
+    },
+    {
+        path: '/download',
+        component: ()=>import('@/views/Download.vue')
     }
 ]
 

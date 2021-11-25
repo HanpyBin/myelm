@@ -31,9 +31,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## TODO LIST
 
 #### PAGES
-进度：11/43
-- [ ] Balance.vue
-    - [ ] Detail.vue
+进度：17/43
+- [x] Balance.vue
+    - [x] Detail.vue
 - [ ] Benefit.vue
     - [ ] Commend.vue
     - [ ] Coupon.vue
@@ -49,7 +49,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - [ ] UserValidation.vue
         - [ ] AddAddress.vue
             - [ ] SearchAddress.vue
-- [ ] Download.vue
+- [x] Download.vue
 - [ ] Find.vue
 - [x] Food.vue
 - [ ] Forget.vue
@@ -71,10 +71,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - [x] ShopDetail.vue
         - [x] ShopSafe.vue
     - [x] FoodDetai.vue
-- [ ] VipCard.vue
-    - [ ] InvoiceCard.vue
-    - [ ] UserCart.vue
-    - [ ] VipDescription.vue
+- [x] VipCard.vue
+    - [x] InvoiceCard.vue
+    - [x] RedeemVip.vue
+    - [x] VipDescription.vue
 
 #### COMPONENTS
 进度：8/9

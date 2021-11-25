@@ -211,3 +211,15 @@ export const ratingTags = shopid => {
         url: BASE_URL + '/ugc/v2/restaurants/' + shopid + '/ratings/tags'
     })
 }
+
+
+export const vipCart = (id, number, password) => {
+    return axios({
+        url: BASE_URL + '/member/v1/users/' + id + '/delivery_card/physical_card/bind',
+        method: 'POST',
+        data:{
+            number,
+            password
+        }
+    })
+}

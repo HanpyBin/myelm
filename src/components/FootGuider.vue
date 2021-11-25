@@ -53,7 +53,7 @@ export default {
         ...mapState(['geohash'])
     },
     mounted() {
-        console.log(this.geohash);
+        // console.log(this.geohash);
     },
     methods:{
         gotoAddress(path){

@@ -151,7 +151,7 @@ export default {
                 this.discount = this.userInfo.gift_amount;
                 this.points = this.userInfo.point;
             }
-        console.log(this.userInfo);
+        // console.log(this.userInfo);
         }
     },
     watch:{
