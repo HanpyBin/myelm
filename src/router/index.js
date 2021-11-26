@@ -130,6 +130,17 @@ const routes = [
                 component: ()=>import('@/views/benefit/children/HbHistory')
             },
         ]
+    },
+    {
+        path: '/points',
+        component: ()=>import('@/views/points/Points'),
+        children:
+        [
+            {
+                path: '/points/detail',
+                component: ()=>import('@/views/points/children/Detail')
+            }
+        ]
     }
 ]
 

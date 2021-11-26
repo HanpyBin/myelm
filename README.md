@@ -31,7 +31,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## TODO LIST
 
 #### PAGES
-进度：24/43
+进度：26/43
 - [x] Balance.vue
     - [x] Detail.vue
 - [x] Benefit.vue
@@ -58,8 +58,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - [x] Index.vue
 - [ ] Order.vue
     - [ ] OrderDetail.vue
-- [ ] Points.vue
-    - [ ] Detail.vue
+- [x] Points.vue
+    - [x] Detail.vue
 - [x] Profile.vue
     - [x] Info.vue
         - [ ] Address.vue
