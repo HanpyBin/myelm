@@ -122,8 +122,8 @@ const routes = [
                 component: ()=>import('@/views/benefit/children/HbDescription')
             },
             {
-                path: '/benefit/commend',
-                component: ()=>import('@/views/benefit/children/Commend')
+                path: '/benefit/recommend',
+                component: ()=>import('@/views/benefit/children/Recommend')
             },
             {
                 path: '/benefit/hbHistory',

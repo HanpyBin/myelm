@@ -51,7 +51,7 @@
                         <router-link to="/benefit/exchange" class="redpocket_style" style="border-right: 1px solid #f5f5f5">
                             兑换红包
                         </router-link>
-                        <router-link to="/benefit/commend" class="redpocket_style">
+                        <router-link to="/benefit/recommend" class="redpocket_style">
                             推荐有奖
                         </router-link>
                     </footer>

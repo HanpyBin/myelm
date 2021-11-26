@@ -31,13 +31,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## TODO LIST
 
 #### PAGES
-进度：22/43
+进度：24/43
 - [x] Balance.vue
     - [x] Detail.vue
 - [x] Benefit.vue
-    - [ ] Commend.vue
+    - [x] Recommend.vue
     - [x] Coupon.vue
-    - [ ] Exchange.vue
+    - [x] Exchange.vue
     - [x] HbDescription.vue
     - [x] HbHistory.vue
 - [x] City.vue

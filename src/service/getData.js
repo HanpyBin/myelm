@@ -236,3 +236,14 @@ export const getExpired = id => {
         url: BASE_URL + '/promotion/v2/users/' + id + '/expired_hongbaos?limit=20&offset=0'
     })
 }
+
+export const exchangeRedpocket = (id, exchange_code, captcha_code) => {
+    return axios({
+        url: BASE_URL + '/v1/users/' + id + '/hongbao/exchange',
+        method: 'POST',
+        data:{
+            exchange_code,
+            captcha_code
+        }
+    })
+}
