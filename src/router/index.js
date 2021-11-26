@@ -102,6 +102,34 @@ const routes = [
     {
         path: '/download',
         component: ()=>import('@/views/Download.vue')
+    },
+    {
+        path: '/benefit',
+        component: ()=>import('@/views/benefit/Benefit'),
+        children:
+        [
+            {
+                path: '/benefit/coupon',
+                component: ()=>import('@/views/benefit/children/Coupon')
+            },
+            {
+                path: '/benefit/exchange',
+                component: ()=>import('@/views/benefit/children/Exchange')
+            },
+
+            {
+                path: '/benefit/hbDescription',
+                component: ()=>import('@/views/benefit/children/HbDescription')
+            },
+            {
+                path: '/benefit/commend',
+                component: ()=>import('@/views/benefit/children/Commend')
+            },
+            {
+                path: '/benefit/hbHistory',
+                component: ()=>import('@/views/benefit/children/HbHistory')
+            },
+        ]
     }
 ]
 

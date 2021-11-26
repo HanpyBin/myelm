@@ -140,7 +140,7 @@ export default {
     components: { TopHeader, FootGuider},
     mounted() {
         this.initData();
-
+        // console.log(this.userInfo);
     },
     methods:{
         initData() {

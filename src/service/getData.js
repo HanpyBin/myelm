@@ -223,3 +223,16 @@ export const vipCart = (id, number, password) => {
         }
     })
 }
+
+export const getRedpocket = id => {
+    return axios({
+        url: BASE_URL + '/promotion/v2/users/' + id + '/hongbaos?limit=20&offset=0'
+    })
+}
+
+
+export const getExpired = id => {
+    return axios({
+        url: BASE_URL + '/promotion/v2/users/' + id + '/expired_hongbaos?limit=20&offset=0'
+    })
+}
