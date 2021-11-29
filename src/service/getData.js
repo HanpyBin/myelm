@@ -247,3 +247,90 @@ export const exchangeRedpocket = (id, exchange_code, captcha_code) => {
         }
     })
 }
+
+export const checkout = (geohash, entities, shopid) =>{
+    return axios({
+        url: BASE_URL + '/v1/carts/checkout',
+        method: 'POST',
+        data:{
+            come_from: 'web',
+            geohash,
+            entities,
+            restaurant_id: shopid
+        }
+    })
+}
+
+export const getAddressList = user_id => {
+    return axios({
+        url: BASE_URL + '/v1/users/'+user_id+'/addresses'
+    })
+}
+
+export const postAddAddress = (userId, address, address_detail, geohash, name, phone, phone_bk,poi_type, sex, tag, tag_type) =>{
+    return axios({
+        url: BASE_URL + '/v1/users/' + userId + '/addresses',
+        method: 'POST',
+        data:{
+            address,
+            address_detail,
+            geohash,
+            name,
+            phone,
+            phone_bk,
+            poi_type,
+            sex,
+            tag,
+            tag_type
+        }
+    })
+}
+
+export const searchNearby = keyword =>{
+    return axios({
+        url: 'http://cangdu.org:8001' + '/v1/pois',
+        params:{
+            type: 'nearby',
+            keyword
+        }
+    })
+}
+
+export const getRemark = (id, sig) =>{
+    return axios({
+        url: BASE_URL + '/v1/carts/' + id + '/remarks',
+        params:{
+            sig
+        }
+    })
+}
+
+export const placeOrders = (user_id, cart_id, address_id, description, entities, geohash, sig) =>{
+    return axios({
+        url: BASE_URL + '/v1/users/' + user_id + '/carts/' + cart_id + '/orders',
+        method: 'POST',
+        data:{
+            address_id,
+            come_from: "mobile_web",
+            deliver_time:"",
+            description,
+            entities,
+            geohash,
+            paymethod:1,
+            sig
+        }
+    })
+}
+
+export const payRequest = (merchantOrderNo, userId) =>{
+    return axios({
+        url: BASE_URL + '/payapi/payment/queryOrder',
+        params:{
+            merchantId: 5,
+            merchantOrderNo,
+            source: 'MOBILE_WAP',
+            userId,
+            version: '1.0.0',
+        }
+    })
+}

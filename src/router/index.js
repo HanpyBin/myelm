@@ -141,6 +141,47 @@ const routes = [
                 component: ()=>import('@/views/points/children/Detail')
             }
         ]
+    },
+    {
+        path: '/confirmOrder',
+        component: ()=>import('@/views/confirmOrder/ConfirmOrder'),
+        children:
+        [
+            {
+                path: '/confirmOrder/chooseAddress',
+                component: ()=>import('@/views/confirmOrder/children/ChooseAddress'),
+                children:
+                [
+                    {
+                        path: 'addAddress',
+                        component: ()=>import('@/views/confirmOrder/children/children/AddAddress'),
+                        children:
+                        [
+                            {
+                                path: 'searchAddress',
+                                component: ()=>import('@/views/confirmOrder/children/children/children/SearchAddress')
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                path: 'invoice',
+                component: ()=>import('@/views/confirmOrder/children/Invoice')
+            },
+            {
+                path: 'remark',
+                component: ()=>import('@/views/confirmOrder/children/Remark')
+            },
+            {
+                path: 'payment',
+                component: ()=>import('@/views/confirmOrder/children/Payment')
+            },
+            {
+                path: 'userValidation',
+                component: ()=>import('@/views/confirmOrder/children/UserValidation')
+            }
+        ]
     }
 ]
 

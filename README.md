@@ -31,7 +31,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## TODO LIST
 
 #### PAGES
-进度：26/43
+进度：33/42
 - [x] Balance.vue
     - [x] Detail.vue
 - [x] Benefit.vue
@@ -41,14 +41,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - [x] HbDescription.vue
     - [x] HbHistory.vue
 - [x] City.vue
-- [ ] ConfirmOrder.vue
-    - [ ] ChooseAddress.vue
-    - [ ] Invoice.vue
-    - [ ] Payment.vue
-    - [ ] Remark.vue
-    - [ ] UserValidation.vue
-        - [ ] AddAddress.vue
-            - [ ] SearchAddress.vue
+- [x] ConfirmOrder.vue
+    - [x] ChooseAddress.vue
+        - [x] AddAddress.vue
+            - [x] SearchAddress.vue
+    - [x] Invoice.vue
+    - [x] Payment.vue
+    - [x] Remark.vue
 - [x] Download.vue
 - [ ] Find.vue
 - [x] Food.vue
@@ -87,3 +86,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - [x] RatingStar.vue
 - [x] ShopList.vue
 - [x] Svg.vue~~直接CV的，我确实不会~~
+
+#### New Features
+- [ ]比如给地址添加左滑出现删除的功能

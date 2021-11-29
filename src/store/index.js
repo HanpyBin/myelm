@@ -13,7 +13,21 @@ export default new Vuex.Store({
         geohash: "31.22299,121.36025",
         login: true, //FIXME:我没有办法login。。。
         cartList:{},
-        shopDetail: null
+        shopDetail: null,
+        shopid: null,
+        remarkText: null,    //可选备注内容
+        inputText: '',  //输入备注内容
+        cart_id: null,
+        sig: null,
+        chosedAddress: null,
+        addressIndex: null,
+        newAddress: [],
+        searchAddress: null,
+        invoice: false,
+        orderParam:null,
+        needValidation: null,
+        cartPrice: null,
+        orderMessage: null
     },
     mutations: {
         SAVE_ADDRESS(state, { latitude, longitude }) {
@@ -118,6 +132,40 @@ export default new Vuex.Store({
             state.cartList[shopid] = null;
             state.cartList = {...state.cartList};
             setLocal('buyCart', state.cartList);
+        },
+        SAVE_SHOPID(state, shopid) {
+            state.shopid = shopid;
+        },
+        SAVE_CART_ID_SIG(state, {cart_id, sig}) {
+            state.cart_id = cart_id;
+            state.sig = sig;
+        },
+        CHOOSE_ADDRESS(state, {address, index}) {
+            state.chosedAddress = address;
+            state.addressIndex = index;
+        },
+        CONFIRM_ADDRESS(state, newAddress){
+            state.newAddress.push(newAddress);
+        },
+        CHOOSE_SEARCH_ADDRESS(state, place) {
+            state.searchAddress = place;
+        },
+        CONFIRM_INVOICE(state, invoice){
+            state.invoice = invoice;
+        },
+        CONFIRM_REMARK(state, {remarkText, inputText}) {
+            state.remarkText = remarkText;
+            state.inputText = inputText;
+        },
+        SAVE_ORDER_PARAM(state, orderParam) {
+            state.orderParam = orderParam;
+        },
+        NEED_VALIDATION(state, needValidation){
+            state.needValidation = needValidation;
+        },
+        ORDER_SUCCESS(state, order){
+            state.cartPrice = null;
+            state.orderMessage = order;
         }
     },
     actions: {
