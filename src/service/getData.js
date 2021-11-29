@@ -334,3 +334,19 @@ export const payRequest = (merchantOrderNo, userId) =>{
         }
     })
 }
+
+export const getOrderList = (user_id, offset) =>{
+    return axios({
+        url: BASE_URL + '/bos/v2/users/' + user_id + '/orders',
+        params:{
+            limit: 10,
+            offset
+        }
+    })
+}
+
+export const getOrderDetail = (user_id, orderid) => {
+    return axios({
+        url: BASE_URL + '/bos/v1/users/' + user_id + '/orders/' + orderid + '/snapshot',
+    })
+}

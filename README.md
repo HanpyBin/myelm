@@ -31,7 +31,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## TODO LIST
 
 #### PAGES
-进度：33/42
+进度：35/41
 - [x] Balance.vue
     - [x] Detail.vue
 - [x] Benefit.vue
@@ -49,14 +49,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - [x] Payment.vue
     - [x] Remark.vue
 - [x] Download.vue
-- [ ] Find.vue
 - [x] Food.vue
 - [ ] Forget.vue
 - [x] Home.vue
 - [x] Login.vue
 - [x] Index.vue
-- [ ] Order.vue
-    - [ ] OrderDetail.vue
+- [x] Order.vue
+    - [x] OrderDetail.vue
 - [x] Points.vue
     - [x] Detail.vue
 - [x] Profile.vue
@@ -64,7 +63,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
         - [ ] Address.vue
         - [ ] SetUsername.vue
             - [ ] Add.vue
-                - [ ] AddDetai.vue
+                - [ ] AddDetail.vue
 - [ ] Search.vue
 - [x] Shop.vue
     - [x] ShopDetail.vue
@@ -76,12 +75,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     - [x] VipDescription.vue
 
 #### COMPONENTS
-进度：8/9
+进度：8/8
 - [x] FootGuider.vue
 - [x] TopHeader.vue
 - [x] AlertTip.vue
 - [x] BuyCart.vue
-- [ ] ComputeTime.vue
 - [x] Loading.vue
 - [x] RatingStar.vue
 - [x] ShopList.vue

@@ -27,7 +27,8 @@ export default new Vuex.Store({
         orderParam:null,
         needValidation: null,
         cartPrice: null,
-        orderMessage: null
+        orderMessage: null,
+        orderDetail: null
     },
     mutations: {
         SAVE_ADDRESS(state, { latitude, longitude }) {
@@ -166,6 +167,9 @@ export default new Vuex.Store({
         ORDER_SUCCESS(state, order){
             state.cartPrice = null;
             state.orderMessage = order;
+        },
+        SAVE_ORDER(state, orderDetail){
+            state.orderDetail = orderDetail;
         }
     },
     actions: {

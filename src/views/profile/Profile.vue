@@ -46,69 +46,56 @@
             </section>
             <section class="other_pages">
                     <router-link to="/order" class="my_pages">
-                    <aside>
-                        <svg fill="#4aa5f0">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#order"></use>
-                        </svg>
-                    </aside>
-                    <span>我的订单</span>
-                    <span class="myorder-divsvg">
-                        <svg fill="#bbb">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
-                        </svg>
-                    </span>
+                        <aside>
+                            <svg fill="#4aa5f0">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#order"></use>
+                            </svg>
+                        </aside>
+                        <span>我的订单</span>
+                        <span class="myorder-divsvg">
+                            <svg fill="#bbb">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+                            </svg>
+                        </span>
                     </router-link>
                     <a href="https://home.m.duiba.com.cn/#/chome/index" class="my_pages">
-                    <aside>
-                        <svg fill="#fc7b53">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#point"></use>
-                        </svg>
-                    </aside>
-                    <span>积分商城</span>
-                    <span class="myorder-divsvg">
-                        <svg fill="#bbb">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
-                        </svg>
-                    </span>
+                        <aside>
+                            <svg fill="#fc7b53">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#point"></use>
+                            </svg>
+                        </aside>
+                        <span>积分商城</span>
+                        <span class="myorder-divsvg">
+                            <svg fill="#bbb">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+                            </svg>
+                        </span>
                     </a>
                     <router-link to="/vipcard" class="my_pages">
-                    <aside>
-                        <svg fill="#ffc636">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vip"></use>
-                        </svg>
-                    </aside>
-                    <span>饿了么会员卡</span>
-                    <span class="myorder-divsvg">
-                        <svg fill="#bbb">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
-                        </svg>
-                    </span>
-                    </router-link>
-                    <router-link to="/service" class="my_pages">
-                    <aside>
-                        <svg fill="#4aa5f0">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#service"></use>
-                        </svg>
-                    </aside>
-                    <span>服务中心</span>
-                    <span class="myorder-divsvg">
-                        <svg fill="#bbb">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
-                        </svg>
-                    </span>
+                        <aside>
+                            <svg fill="#ffc636">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vip"></use>
+                            </svg>
+                        </aside>
+                        <span>饿了么会员卡</span>
+                        <span class="myorder-divsvg">
+                            <svg fill="#bbb">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+                            </svg>
+                        </span>
                     </router-link>
                     <router-link to="/download" class="my_pages">
-                    <aside>
-                        <svg fill="#3cabff">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download"></use>
-                        </svg>
-                    </aside>
-                    <span>下载饿了么APP</span>
-                    <span class="myorder-divsvg">
-                        <svg fill="#bbb">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
-                        </svg>
-                    </span>
+                        <aside>
+                            <svg fill="#3cabff">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#download"></use>
+                            </svg>
+                        </aside>
+                        <span>下载饿了么APP</span>
+                        <span class="myorder-divsvg">
+                            <svg fill="#bbb">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use>
+                            </svg>
+                        </span>
                     </router-link>
             </section>
         </section>

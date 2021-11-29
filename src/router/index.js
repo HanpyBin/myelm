@@ -67,7 +67,14 @@ const routes = [
     },
     {
         path: '/order',
-        component: ()=>import('@/views/Order')
+        component: ()=>import('@/views/order/Order'),
+        children:
+        [
+            {
+                path: 'orderDetail',
+                component: ()=>import('@/views/order/children/OrderDetail')
+            }
+        ]
     },
     {
         path: '/vipcard',
