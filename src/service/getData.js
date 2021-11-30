@@ -350,3 +350,15 @@ export const getOrderDetail = (user_id, orderid) => {
         url: BASE_URL + '/bos/v1/users/' + user_id + '/orders/' + orderid + '/snapshot',
     })
 }
+
+export const searchRestaurant = (geohash, keyword) =>{
+    return axios({
+        url: BASE_URL + '/v4/restaurants',
+        params:{
+            'extras[]': 'restaurant_activity',
+            geohash,
+            keyword,
+            type: 'search'
+        }
+    })
+}
